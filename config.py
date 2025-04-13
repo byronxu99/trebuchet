@@ -14,6 +14,9 @@ class Config:
     l_2: float = 1.0
     l_b: float = 0.2
 
+    # Initial angle of rod 2 relative to rod 1
+    theta_2_init_offset: float = 0.0
+
     # Point masses
     m_j: float = 1.0
     m_p: float = 1.0
@@ -36,11 +39,13 @@ class Config:
     r_j: float = 0.0
     r_p: float = 0.0
     r_b: float = 0.0
+    r_d: float = 0.0
 
     # Drag coefficients
     rho_air: float = 1.225
     Cd_cyl: float = 1.1
     Cd_sph: float = 0.47
+    Cd_disk: float = 1.17
 
 
 def load_config(config_path: str) -> Config:
